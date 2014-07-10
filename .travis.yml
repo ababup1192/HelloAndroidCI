@@ -9,5 +9,6 @@ android:
     - sysimg-19
   licenses:
     - '.+'
-  script:
-    - ./gradlew connectedAndroidTest
+script:
+  - ./gradlew connectedAndroidTest
+
