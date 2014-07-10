@@ -1,12 +1,13 @@
 language: android
+jdk: openjdk7
 android:
   components:
-    - build-tools-19.0.3
+    - build-tools-19.1.0
     - android-19
-    - sysimg-19
     - extra-android-support
+    - extra-android-m2repository
+    - sysimg-19
   licenses:
-    - android-sdk-license-5be876d5
-    - '.*intel.+'
+    - '.+'
   script:
     - ./gradlew connectedAndroidTest
