@@ -8,3 +8,6 @@ android:
   licenses:
     - android-sdk-license-bcbbd656
     - '.*intel.+'
+
+  script:
+	- ./gradlew connectedAndroidTest
