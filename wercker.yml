@@ -15,7 +15,7 @@ build:
     - android-sdk-update:
         filter: sys-img-armeabi-v7a-android-18
     - setup-android-emulator:
-        target: sys-img-armeabi-v7a-android-18
+        target: android-18
     - script:
         name: testing
         code: |
