@@ -12,9 +12,12 @@ build:
           echo $ANDROID_UPDATE_FILTER
     - android-sdk-update:
         filter: platform-tools,build-tools-19.1.0,extra-android-m2repository,extra-google-m2repository
-    # A step that executes `gradle build` command
     - script:
-        name: run gradle
+        name: testing
+        code: |
+          gradle --full-stacktrace clean connectedCheck
+    - script:
+        name: package release
         code: |
           gradle --full-stacktrace clean packageRelease
 deploy:
