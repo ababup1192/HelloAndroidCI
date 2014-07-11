@@ -17,3 +17,10 @@ build:
         name: run gradle
         code: |
           gradle --full-stacktrace clean packageDebug
+deploy:
+  steps:
+    - script:
+        name: upload to deploygate
+        code: |
+                curl -F "file=@HelloAndroidCI/app/build/outputs/apk/app-release-unsigned.apk" -F "token=a75f406073f69d308272602fd1e6253019b7b591" -F "message=sample android app" https://deploygate.com/api/users/ababup1192/apps
+
