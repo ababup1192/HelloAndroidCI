@@ -4,6 +4,12 @@ android {
     compileSdkVersion 19
     buildToolsVersion "19.1.0"
 
+    signingConfigs{
+        //debug {
+           // storeFile file('keys/debug.keystore')
+        //}
+    }
+
     defaultConfig {
         applicationId "abab.abab.helloandroidci"
         minSdkVersion 10
