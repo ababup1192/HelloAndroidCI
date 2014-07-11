@@ -14,6 +14,8 @@ build:
         filter: platform-tools,build-tools-19.1.0,extra-android-m2repository,extra-google-m2repository
     - android-sdk-update:
         filter: sys-img-armeabi-v7a-android-18
+    - setup-android-emulator:
+        target: sys-img-armeabi-v7a-android-18
     - script:
         name: testing
         code: |
