@@ -22,7 +22,5 @@ deploy:
     - script:
         name: upload to deploygate
         code: |
-                ls
-                pwd
-                curl -F "file=@HelloAndroidCI/app/build/outputs/apk/app-release-unsigned.apk" -F "token=a75f406073f69d308272602fd1e6253019b7b591" -F "message=sample android app" https://deploygate.com/api/users/ababup1192/apps
+                curl -F "file=@app/build/outputs/apk/app-release-unsigned.apk" -F "token=a75f406073f69d308272602fd1e6253019b7b591" -F "message=sample android app" https://deploygate.com/api/users/ababup1192/apps
 
